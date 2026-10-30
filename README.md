@@ -1,2 +1,2 @@
-# std-empty-repo-template
-Template for new empty app code repository
+# Faktaark for tilstandsregnskap
+Faktaark med informasjon om indikatorene i nasjonalt tilstandsregnskap. 
