@@ -8,14 +8,17 @@
 .mdir-footer {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 8px;
 }
 
 .mdir-footer .btn {
   margin: 0;
+  font-size: 0.7rem;
+  padding: 4px 6px;
 }
 
 .mdir-footer img {
-  width: 70px;
+  display: block;
+  width: 45px;
   height: auto;
 }
