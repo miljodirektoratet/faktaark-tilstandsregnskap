@@ -2,3 +2,15 @@ theme: just-the-docs
 title: Faktaark
 description: Faktaark med informasjon om indikatorene i nasjonalt tilstandsregnskap. 
 color_scheme: miljo
+
+
+nav_external_links:
+  - title: Faktaark på GitHub
+    url: https://github.com/miljodirektoratet/faktaark-tilstandsregnskap
+    hide_icon: false
+    opens_in_new_tab: true
+    
+  - title: Miljødirektoratet på GitHub
+    url: https://github.com/miljodirektoratet
+    hide_icon: false
+    opens_in_new_tab: true
