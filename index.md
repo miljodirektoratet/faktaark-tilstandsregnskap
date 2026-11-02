@@ -10,7 +10,7 @@ nav_order: 1
 Faktaark med informasjon om indikatorene i nasjonalt tilstandsregnskap.
 {: .fs-6 .fw-300 }
 
-[Hjemmesiden på Github][Just the Docs repo]{: .btn .fs-5 .mb-4 .mb-md-0 }
+[Vis på GitHub](https://github.com/miljodirektoratet/faktaark-tilstandsregnskap){: .btn .fs-5 .mb-4 .mb-md-0 }
 
 ## Indikatorer
 
