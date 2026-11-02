@@ -5,10 +5,12 @@ nav_order: 1
 ---
 
 # Faktaark for tilstandsregnskap
+{: .fs-9 }
 
-<p class="fs-6 fw-300">
 Faktaark med informasjon om indikatorene i nasjonalt tilstandsregnskap.
-</p>
+{: .fs-6 .fw-300 }
+
+[Hjemmesiden på Github][Just the Docs repo]{: .btn .fs-5 .mb-4 .mb-md-0 }
 
 ## Indikatorer
 
