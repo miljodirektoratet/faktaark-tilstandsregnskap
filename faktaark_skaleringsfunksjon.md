@@ -8,7 +8,7 @@ permalink: /skaleringsfunksjon/
 
 Dette faktaarket viser hvordan vi skalerer indikatorene. 
 
-[Åpne faktaarket i ny fane]({{ '/assets/pdf/faktaark_skaleringsfunksjon.pdf' | relative_url }})
+[Åpne faktaarket i ny fane]({{ '/assets/pdf/faktaark_skaleringsfunksjon.pdf' | relative_url }}){: target="_blank" rel="noopener" }
 
 <embed class="pdf-viewer"
        src="{{ '/assets/pdf/faktaark_skaleringsfunksjon.pdf' | relative_url }}#view=FitH"
