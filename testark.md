@@ -1,5 +1,4 @@
 ---
-published: false # Fjern denne hvis siden skal publiseres
 layout: default
 title: Testark
 permalink: /testark/
