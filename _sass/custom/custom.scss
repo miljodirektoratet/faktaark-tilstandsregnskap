@@ -16,3 +16,8 @@
   width: 45px;
   height: auto;
 }
+
+.btn:focus {
+outline-color: $link-color;
+box-shadow: 0 0 0 3px $link-color;
+}
