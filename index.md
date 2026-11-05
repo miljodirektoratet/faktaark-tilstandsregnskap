@@ -12,7 +12,8 @@ Faktaark med informasjon om indikatorene i nasjonalt tilstandsregnskap.
 
 [Vis på GitHub](https://github.com/miljodirektoratet/faktaark-tilstandsregnskap){: .btn .fs-5 .mb-4 .mb-md-0 }
 
-## Indikatorer
+## Faktaark
 
-### Testark
-- [Testark 1]({% link testark.md %})
+### Skaleringsfunksjon
+Faktaark som forklarer hvordan vi skalerer indikatorene.
+- [Skaleringsfunksjon]({% link faktaark_skaleringsfunksjon.md %})
