@@ -17,7 +17,10 @@
   height: auto;
 }
 
-.btn:focus {
-outline-color: $link-color;
-box-shadow: 0 0 0 3px $link-color;
+.btn:focus,
+.btn:focus-visible,
+.btn:active {
+  outline: 3px solid #006C5B !important;
+  outline-offset: 2px;
+  box-shadow: none !important;
 }
