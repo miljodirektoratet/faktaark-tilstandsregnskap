@@ -2,7 +2,8 @@ theme: just-the-docs
 title: Faktaark
 description: Faktaark med informasjon om indikatorene i nasjonalt tilstandsregnskap. 
 color_scheme: miljo
-
+exclude:
+  - template.md
 
 nav_external_links:
   - title: Faktaark på GitHub
