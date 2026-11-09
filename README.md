@@ -10,3 +10,5 @@ Faktaark med informasjon om indikatorene i nasjonalt tilstandsregnskap.
 6. Lag en pull request og merge. Dette skal starte deployment som oppdaterer nettsiden.
 7. Sjekk at det ser ok ut på nettsiden. 
 8. Slett branchen når alt er merget.
+
+Hvis det må gjøres små endringer etterpå er det helt ok å arbeide direkte på main. 
