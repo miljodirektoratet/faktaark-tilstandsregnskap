@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+<h1>{{ page.indikator }}, {{ page.kode }}</h1>
+
+<p>
+  Dette faktaarket viser indikatoren "{{ page.indikator }}"
+  i økosystemet {{ page.parent }}.
+</p>
+
+<a href="{{ page.pdf | relative_url }}"
+   class="btn fs-5 mb-4 mb-md-0"
+   target="_blank"
+   rel="noopener">
+  Åpne faktaarket i ny fane
+</a>
+
+<embed class="pdf-viewer"
+       src="{{ page.pdf | relative_url }}#view=FitH"
+       type="application/pdf">
