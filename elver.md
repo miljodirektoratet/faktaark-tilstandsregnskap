@@ -12,8 +12,12 @@ has_children: true
 Faktaark med informasjon om indikatorene for økosystemet elver, bekker og kanaler.
 {: .fs-6 .fw-300 }
 
-## Faktaark
+## Indikatorer
 
-### Oter, 
-Faktaark som forklarer hvordan vi skalerer indikatorene.
-- [Oter, NO_NIPR_002]({% link faktaark_elver_NO_NIPR_002.md %})
+{% assign faktaark = site.pages
+ | where: "parent", page.title
+ | sort: "nav_order" %}
+
+{% for ark in faktaark %}
+- [{{ ark.indikator }}, {{ ark.kode }}]({{ ark.url | relative_url }})
+{% endfor %}
