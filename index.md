@@ -20,17 +20,13 @@ Faktaark som forklarer hvordan vi skalerer indikatorene.
 
 ### Økosystemer
 
-{% assign okosystemer = site.pages
- | where: "okosystem", true
- | sort: "nav_order" %}
+{% assign okosystemer = site.pages | where: "okosystem", true | sort: "nav_order" %}
 
 {% for oko in okosystemer %}
 
 #### [{{ oko.title }}]({{ oko.url | relative_url }})
 
-{% assign faktaark = site.pages
- | where: "parent", oko.title
- | sort: "nav_order" %}
+{% assign faktaark = site.pages | where: "parent", oko.title | sort: "nav_order" %}
 
 {% for ark in faktaark %}
 - [{{ ark.indikator }}, {{ ark.kode }}]({{ ark.url | relative_url }})
