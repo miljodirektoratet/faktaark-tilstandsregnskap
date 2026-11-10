@@ -1,8 +1,9 @@
 ---
 layout: default
 title: Elver, bekker og kanaler
-nav_order: 1
+nav_order: 2
 permalink: /elver/
+has_children: true
 ---
 
 # Faktaark for elver, bekker og kanaler
