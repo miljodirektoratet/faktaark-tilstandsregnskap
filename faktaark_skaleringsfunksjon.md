@@ -2,6 +2,7 @@
 layout: default
 title: Skaleringsfunksjon
 permalink: /skaleringsfunksjon/
+nav_order: 1
 ---
 
 # Skaleringsfunksjon
