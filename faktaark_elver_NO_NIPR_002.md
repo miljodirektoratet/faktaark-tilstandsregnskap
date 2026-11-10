@@ -11,8 +11,8 @@ pdf: /assets/pdf/faktaark_elver_NO_NIPR_002.pdf
 
 Dette faktaarket viser indikatoren "Oter" i økosystemet elver, bekker og kanaler. 
 
-[Åpne faktaarket i ny fane]({{ 'page.pdf' | relative_url }}){: .btn .fs-5 .mb-4 .mb-md-0 target="_blank" rel="noopener" }
+[Åpne faktaarket i ny fane]({{ page.pdf | relative_url }}){: .btn .fs-5 .mb-4 .mb-md-0 target="_blank" rel="noopener" }
 
 <embed class="pdf-viewer"
-       src="{{ 'page.pdf' | relative_url }}#view=FitH"
+       src="{{ page.pdf | relative_url }}#view=FitH"
        type="application/pdf">
