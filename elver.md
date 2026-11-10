@@ -15,4 +15,4 @@ Faktaark med informasjon om indikatorene for økosystemet elver, bekker og kanal
 
 ### Oter, 
 Faktaark som forklarer hvordan vi skalerer indikatorene.
-- [Oter, NO_NIPR_002]({% link faktaark_NO_NIPR_002.md %})
+- [Oter, NO_NIPR_002]({% link faktaark_elver_NO_NIPR_002.md %})
