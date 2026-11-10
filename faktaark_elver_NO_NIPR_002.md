@@ -1,7 +1,9 @@
 ---
 layout: default
 title: Faktaark for oter
-permalink: /elver/NO_NIPR_002/
+permalink: /NO_NIPR_002/
+parent: Elver, bekker og kanaler
+nav_order: 1
 ---
 
 # Oter, NO_NIPR_002
