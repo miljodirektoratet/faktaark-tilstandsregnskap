@@ -18,10 +18,22 @@ Faktaark med informasjon om indikatorene i nasjonalt tilstandsregnskap.
 Faktaark som forklarer hvordan vi skalerer indikatorene.
 - [Skaleringsfunksjon]({% link faktaark_skaleringsfunksjon.md %})
 
+### Økosystemer
 
-### Elver, bekker og kanaler
-- [Elver, bekker og kanaler]({% link elver.md %})
+{% assign okosystemer = site.pages
+ | where: "okosystem", true
+ | sort: "nav_order" %}
 
-#### Oter, NO_NIPR_002
-Faktaark for indikatoren Oter 
-- [Oter]({% link faktaark_elver_NO_NIPR_002.md %})
+{% for oko in okosystemer %}
+
+#### [{{ oko.title }}]({{ oko.url | relative_url }})
+
+{% assign faktaark = site.pages
+ | where: "parent", oko.title
+ | sort: "nav_order" %}
+
+{% for ark in faktaark %}
+- [{{ ark.indikator }}, {{ ark.kode }}]({{ ark.url | relative_url }})
+{% endfor %}
+
+{% endfor %}
