@@ -17,3 +17,11 @@ Faktaark med informasjon om indikatorene i nasjonalt tilstandsregnskap.
 ### Skaleringsfunksjon
 Faktaark som forklarer hvordan vi skalerer indikatorene.
 - [Skaleringsfunksjon]({% link faktaark_skaleringsfunksjon.md %})
+
+
+### Elver, bekker og kanaler
+- [Elver, bekker og kanaler]({% link elver.md %})
+
+#### Oter, NO_NIPR_002
+Faktaark for indikatoren Oter 
+- [Oter]({% link faktaark_elver_NO_NIPR_002.md %})
