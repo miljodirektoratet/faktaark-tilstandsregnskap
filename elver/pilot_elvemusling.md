@@ -1,7 +1,7 @@
 ---
 layout: faktaark
 title: Elvemusling
-permalink: /pilot_elvemusling/
+permalink: /elver/pilot_elvemusling/
 parent: Elver, bekker og kanaler
 kode: Pilot_Elvemusling
 nav_order: 2
