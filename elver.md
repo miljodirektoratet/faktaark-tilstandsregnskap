@@ -4,6 +4,7 @@ title: Elver, bekker og kanaler
 nav_order: 2
 permalink: /elver/
 has_children: true
+okosystem: true
 ---
 
 # Faktaark for elver, bekker og kanaler
