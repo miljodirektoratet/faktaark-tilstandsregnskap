@@ -29,7 +29,7 @@ Faktaark som forklarer hvordan vi skalerer indikatorene.
 {% assign faktaark = site.pages | where: "parent", oko.title | sort: "nav_order" %}
 
 {% for ark in faktaark %}
-- [{{ ark.indikator }}, {{ ark.kode }}]({{ ark.url | relative_url }})
+- [{{ ark.title }}, {{ ark.kode }}]({{ ark.url | relative_url }})
 {% endfor %}
 
 {% endfor %}
