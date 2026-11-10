@@ -20,5 +20,5 @@ Faktaark med informasjon om indikatorene for økosystemet elver, bekker og kanal
  | sort: "nav_order" %}
 
 {% for ark in faktaark %}
-- [{{ ark.indikator }}, {{ ark.kode }}]({{ ark.url | relative_url }})
+- [{{ ark.title }}, {{ ark.kode }}]({{ ark.url | relative_url }})
 {% endfor %}
