@@ -5,6 +5,7 @@ nav_order: 2
 permalink: /elver/
 has_children: true
 okosystem: true
+has_toc: false
 ---
 
 # Faktaark for elver, bekker og kanaler
