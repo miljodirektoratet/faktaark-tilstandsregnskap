@@ -1,15 +1,143 @@
 # Faktaark for tilstandsregnskap
-Faktaark med informasjon om indikatorene i nasjonalt tilstandsregnskap. 
 
-## Legg inn nytt ark
-1. Opprett en ny branch fra "main", feks faktaark1
-2. Legg pdf-filen i assets/pdf, feks assets/pdf/NO_NIPR_002.pdf. Det er viktig at navnet på pdf-en kun er indikator-ID-en.
-3. Hvis ikke økosystemet har en mappe enda, opprett en mappe for økosystemet. Navnet på denne mappen vil bli med i linken til hjemmesiden, feks https://miljodirektoratet.github.io/faktaark-tilstandsregnskap/elver/
-4. Denne mappen trenger også en index.md. Kopier innholdet i en av disse fra et annet økosystem og endre title, nav_order (rekkefølge i listen på nettsiden), og permalink. 
-5. Kopier innholdet i testark.md til en ny fil og navngi den som /økosystem/id.md, feks /elver/NO_NIPR_002.md
-6. Endre: title (navn på indikatoren, feks Oter), kode (feks NO_NIPR_002), og parent (navn på økosystemet).
-7. Lag en pull request og merge. Dette skal starte deployment som oppdaterer nettsiden.
-8. Sjekk at det ser ok ut på nettsiden. 
-9. Slett branchen når alt er merget.
+Faktaark med informasjon om indikatorene i nasjonalt tilstandsregnskap.
 
-Hvis det må gjøres små endringer etterpå er det helt ok å arbeide direkte på main. 
+## Legg inn et nytt faktaark
+
+### 1. Opprett en branch
+
+Opprett en ny branch fra `main`..
+
+Eksempel:
+`faktaark-oter`, eller `faktaark-elver`
+
+Gjør alle endringene knyttet til det nye faktaarket/faktaarkene i denne branchen.
+Det er ikke så farlig hva den heter, den skal slettes etterpå. Du kan godt legge inn flere faktaark i samme branch. 
+
+
+### 2. Legg inn PDF-filen
+
+Legg PDF-filen i:
+
+`assets/pdf/`
+
+PDF-filen skal ha indikator-ID-en som filnavn.
+
+Eksempel:
+
+`assets/pdf/NO_NIPR_002.pdf`
+
+**Viktig:** Filnavnet må være det samme som verdien som senere legges inn som `kode` i Markdown-filen. PDF-en kobles automatisk til riktig indikatorside ved hjelp av denne koden.
+
+
+### 3. Opprett mappe for økosystemet ved behov
+
+Hvis det ikke allerede finnes en mappe for økosystemet, opprett en ny mappe.
+
+Bruk et kort og beskrivende navn uten mellomrom.
+
+Eksempel:
+
+`elver/`
+
+Mappenavnet blir en del av URL-en til økosystemsiden, for eksempel:
+
+`https://miljodirektoratet.github.io/faktaark-tilstandsregnskap/elver/`
+
+Hvis mappen allerede finnes, går du videre til steg 5.
+
+
+### 4. Opprett `index.md` for et nytt økosystem
+
+Et nytt økosystem trenger en `index.md` i økosystemmappen.
+
+Den enkleste måten er å kopiere `index.md` fra et eksisterende økosystem og endre metadataene øverst i filen.
+
+Eksempel:
+
+Fyll ut:
+
+*title: Fullt navn på økosystemet slik det skal vises på nettsiden.
+**Eksempel: Elver, bekker og kanaler
+*nav_order: Bestemmer rekkefølgen mellom økosystemene i listen på nettsiden. 
+**Eksempel: 1
+*permalink: Adressen til økosystemsiden. Denne bør samsvare med mappenavnet.
+**Eksempel: /elver/
+
+**Ikke** endre andre felter. 
+
+## 5. Opprett Markdown-fil for indikatoren
+
+Kopier `testark.md` og legg kopien i riktig økosystemmappe.
+
+Gi filen samme navn som indikator-ID-en.
+
+Eksempel:
+
+```text
+elver/NO_NIPR_002.md
+```
+
+Fyll ut:
+
+- **`title`**: Navnet på indikatoren slik det skal vises på nettsiden.
+  - Eksempel: `Oter`
+- **`kode`**: Indikator-ID. Må samsvare nøyaktig med navnet på PDF-filen, uten `.pdf`.
+  - Eksempel: `NO_NIPR_002`
+- **`parent`**: Økosystemet indikatoren tilhører. Må samsvare nøyaktig med `title` i økosystemets `index.md`.
+  - Eksempel: `Elver, bekker og kanaler`
+- **`nav_order`**: Bestemmer rekkefølgen på indikatorene innenfor økosystemet.
+- 
+
+## 6. Kontroller at navnene samsvarer
+
+Før du lager en pull request, kontroller særlig følgende:
+
+| Felt/fil | Eksempel |
+|---|---|
+| PDF-fil | `assets/pdf/NO_NIPR_002.pdf` |
+| Markdown-fil | `elver/NO_NIPR_002.md` |
+| `kode` | `NO_NIPR_002` |
+| `parent` | `Elver, bekker og kanaler` |
+| `title` i `elver/index.md` | `Elver, bekker og kanaler` |
+
+Det er særlig to koblinger som er viktige:
+
+- **`kode` → PDF:** `kode: NO_NIPR_002` gjør at nettsiden finner `assets/pdf/NO_NIPR_002.pdf`.
+- **`parent` → økosystem:** `parent: Elver, bekker og kanaler` gjør at faktaarket plasseres under økosystemsiden med `title: Elver, bekker og kanaler`.
+
+
+## 7. Lag pull request og merge
+
+Når filene er lagt inn:
+
+1. Commit endringene til branchen.
+2. Push branchen til GitHub.
+3. Opprett en pull request mot `main`.
+4. Kontroller endringene i pull requesten.
+5. Merge til `main`.
+
+Merge til `main` starter deployment som oppdaterer nettsiden.
+
+
+## 8. Kontroller nettsiden
+
+Når deployment er ferdig, kontroller at:
+
+- økosystemet vises på riktig sted
+- indikatoren vises under riktig økosystem
+- indikatornavn og indikator-ID er riktige
+- lenken til indikatorsiden fungerer
+- riktig PDF vises
+- **Åpne faktaarket i ny fane** åpner riktig PDF
+
+
+## 9. Slett branchen
+
+Når pull requesten er merget og nettsiden er kontrollert, kan branchen slettes.
+
+
+## Små endringer
+
+Mindre rettelser kan gjøres direkte på `main`. 
+
