@@ -49,11 +49,7 @@ Hvis mappen allerede finnes, går du videre til steg 5.
 
 ### 4. Opprett `index.md` for et nytt økosystem
 
-Et nytt økosystem trenger en `index.md` i økosystemmappen.
-
-Den enkleste måten er å kopiere `index.md` fra et eksisterende økosystem og endre metadataene øverst i filen.
-
-Eksempel:
+Et nytt økosystem trenger en `index.md` i økosystemmappen. Den enkleste måten er å kopiere `index.md` fra et eksisterende økosystem og endre metadataene øverst i filen.
 
 Fyll ut:
 
@@ -68,12 +64,9 @@ Fyll ut:
 
 ## 5. Opprett Markdown-fil for indikatoren
 
-Kopier `testark.md` og legg kopien i riktig økosystemmappe.
-
-Gi filen samme navn som indikator-ID-en.
+Kopier `testark.md` og legg kopien i riktig økosystemmappe. Gi filen samme navn som indikator-ID-en.
 
 Eksempel:
-
 ```text
 elver/NO_NIPR_002.md
 ```
@@ -89,38 +82,24 @@ Fyll ut:
 - **`nav_order`**: Bestemmer rekkefølgen på indikatorene innenfor økosystemet.
 - 
 
-## 6. Kontroller at navnene samsvarer
+## 6. Lag pull request og merge
 
 Før du lager en pull request, kontroller særlig følgende:
-
-| Felt/fil | Eksempel |
-|---|---|
-| PDF-fil | `assets/pdf/NO_NIPR_002.pdf` |
-| Markdown-fil | `elver/NO_NIPR_002.md` |
-| `kode` | `NO_NIPR_002` |
-| `parent` | `Elver, bekker og kanaler` |
-| `title` i `elver/index.md` | `Elver, bekker og kanaler` |
-
-Det er særlig to koblinger som er viktige:
 
 - **`kode` → PDF:** `kode: NO_NIPR_002` gjør at nettsiden finner `assets/pdf/NO_NIPR_002.pdf`.
 - **`parent` → økosystem:** `parent: Elver, bekker og kanaler` gjør at faktaarket plasseres under økosystemsiden med `title: Elver, bekker og kanaler`.
 
+Når du er klar:
 
-## 7. Lag pull request og merge
-
-Når filene er lagt inn:
-
-1. Commit endringene til branchen.
-2. Push branchen til GitHub.
-3. Opprett en pull request mot `main`.
-4. Kontroller endringene i pull requesten.
-5. Merge til `main`.
+1. Opprett en pull request mot `main`.
+2. Kontroller endringene i pull requesten.
+3. Merge til `main`.
 
 Merge til `main` starter deployment som oppdaterer nettsiden.
 
+Slett branchen etterpå. 
 
-## 8. Kontroller nettsiden
+## 7. Kontroller nettsiden
 
 Når deployment er ferdig, kontroller at:
 
@@ -130,11 +109,6 @@ Når deployment er ferdig, kontroller at:
 - lenken til indikatorsiden fungerer
 - riktig PDF vises
 - **Åpne faktaarket i ny fane** åpner riktig PDF
-
-
-## 9. Slett branchen
-
-Når pull requesten er merget og nettsiden er kontrollert, kan branchen slettes.
 
 
 ## Små endringer
