@@ -47,12 +47,15 @@ Lim inn innholdet fra en annen index.md, og endre metadata øverst.
 
 Fyll ut:
 
-*title: Fullt navn på økosystemet slik det skal vises på nettsiden.
-**Eksempel: Elver, bekker og kanaler
-*nav_order: Bestemmer rekkefølgen mellom økosystemene i listen på nettsiden. 
-**Eksempel: 1
-*permalink: Adressen til økosystemsiden. Denne bør samsvare med mappenavnet.
-**Eksempel: /elver/
+- **`title`**: Navnet på indikatoren slik det skal vises på nettsiden.
+  - Eksempel: `Oter`
+- **`kode`**: Indikator-ID.
+  - Eksempel: `NO_NIPR_002`
+  - Må samsvare nøyaktig med navnet på PDF-filen, uten `.pdf`.
+- **`parent`**: Økosystemet indikatoren tilhører.
+  - Eksempel: `Elver, bekker og kanaler`
+  - Må samsvare nøyaktig med `title` i økosystemets `index.md`.
+- **`nav_order`**: Bestemmer rekkefølgen på indikatorene innenfor økosystemet.
 
 **Ikke** endre andre felter. 
 
