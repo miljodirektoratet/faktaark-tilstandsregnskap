@@ -11,7 +11,7 @@ layout: default
   i økosystemet {{ page.parent }}.
 </p>
 
-<a href="{{ page.pdf | relative_url }}"
+<a href="{{ pdf_path | relative_url }}"
    class="btn fs-5 mb-4 mb-md-0"
    target="_blank"
    rel="noopener">
@@ -19,5 +19,5 @@ layout: default
 </a>
 
 <embed class="pdf-viewer"
-       src="{{ page.pdf | relative_url }}#view=FitH"
+       src="{{ pdf_path | relative_url }}#view=FitH"
        type="application/pdf">
