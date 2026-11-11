@@ -32,24 +32,18 @@ Eksempel:
 
 ### 3. Opprett mappe for økosystemet ved behov
 
-Hvis det ikke allerede finnes en mappe for økosystemet, opprett en ny mappe.
+Hvis mappen allerede finnes, går du videre til steg 4.
 
-Bruk et kort og beskrivende navn uten mellomrom.
+Hvis det ikke allerede finnes en mappe for økosystemet, må vi opprette den. Det gjør vi ved å lage en ny fil med sti til den mappen. Finn en annen index.md, feks `elver/index.md`, og kopier innholdet (fra redigeringsmodus). Index.md trengs for å lage hierarki på nettsiden. Opprett en ny fil, og legg inn /økosystem-navn/index.md i filnavnet. Dette vil automatisk opprette mappen hvis den ikke finnes. Bruk et kort og beskrivende navn for økosystemet, uten mellomrom.
 
 Eksempel:
-
-`elver/`
+`elver/index.md`
 
 Mappenavnet blir en del av URL-en til økosystemsiden, for eksempel:
 
 `https://miljodirektoratet.github.io/faktaark-tilstandsregnskap/elver/`
 
-Hvis mappen allerede finnes, går du videre til steg 5.
-
-
-### 4. Opprett `index.md` for et nytt økosystem
-
-Et nytt økosystem trenger en `index.md` i økosystemmappen. Den enkleste måten er å kopiere `index.md` fra et eksisterende økosystem og endre metadataene øverst i filen.
+Lim inn innholdet fra en annen index.md, og endre metadata øverst.
 
 Fyll ut:
 
@@ -62,7 +56,7 @@ Fyll ut:
 
 **Ikke** endre andre felter. 
 
-## 5. Opprett Markdown-fil for indikatoren
+## 4. Opprett Markdown-fil for indikatoren
 
 Kopier `testark.md` og legg kopien i riktig økosystemmappe. Gi filen samme navn som indikator-ID-en.
 
