@@ -56,7 +56,7 @@ Fyll ut:
 
 **Ikke** endre andre felter. 
 
-## 4. Opprett Markdown-fil for indikatoren
+### 4. Opprett Markdown-fil for indikatoren
 
 Kopier `testark.md` og legg kopien i riktig økosystemmappe. Gi filen samme navn som indikator-ID-en.
 
@@ -76,7 +76,7 @@ Fyll ut:
 - **`nav_order`**: Bestemmer rekkefølgen på indikatorene innenfor økosystemet.
 - 
 
-## 6. Lag pull request og merge
+### 5. Lag pull request og merge
 
 Før du lager en pull request, kontroller særlig følgende:
 
@@ -93,7 +93,7 @@ Merge til `main` starter deployment som oppdaterer nettsiden.
 
 Slett branchen etterpå. 
 
-## 7. Kontroller nettsiden
+### 6. Kontroller nettsiden
 
 Når deployment er ferdig, kontroller at:
 
