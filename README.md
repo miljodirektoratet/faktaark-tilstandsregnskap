@@ -37,7 +37,7 @@ Hvis mappen allerede finnes, går du videre til steg 4.
 Hvis det ikke allerede finnes en mappe for økosystemet, må vi opprette den. Det gjør vi ved å lage en ny fil med sti til den mappen. Finn en annen index.md, feks `elver/index.md`, og kopier innholdet (fra redigeringsmodus). Index.md trengs for å lage hierarki på nettsiden. Opprett en ny fil, og legg inn /økosystem-navn/index.md i filnavnet. Dette vil automatisk opprette mappen hvis den ikke finnes. Bruk et kort og beskrivende navn for økosystemet, uten mellomrom.
 
 Eksempel:
-`elver/index.md`
+`/elver/index.md`
 
 Mappenavnet blir en del av URL-en til økosystemsiden, for eksempel:
 
