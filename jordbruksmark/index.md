@@ -1,0 +1,25 @@
+---
+layout: default
+title: Jordbruksmark
+nav_order: 5
+permalink: /jordbruksmark/
+has_children: true
+okosystem: true
+has_toc: false
+---
+
+# Faktaark for jordbruksmark
+{: .fs-9 }
+
+Faktaark med informasjon om indikatorene for økosystemet jordbruksmark.
+{: .fs-6 .fw-300 }
+
+## Indikatorer
+
+{% assign faktaark = site.pages
+ | where: "parent", page.title
+ | sort: "nav_order" %}
+
+{% for ark in faktaark %}
+- [{{ ark.title }}, {{ ark.kode }}]({{ ark.url | relative_url }})
+{% endfor %}

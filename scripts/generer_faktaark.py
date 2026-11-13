@@ -1,4 +1,3 @@
-%python
 #!/usr/bin/env python3
 """
 Genererer faktaark-sider fra data/faktaark.xlsx (første ark).
@@ -129,22 +128,30 @@ def main():
         if mappe in eksisterende and eksisterende[mappe]["title"] != parent:
             feil.append(f"Rad {radnr}: parent '{parent}' er ikke lik title i {mappe}/index.md ('{eksisterende[mappe]['title']}').")
 
+    # Hvilke økosystemer hver kode skal ligge i
+    mapper_per_kode = {}
+    for _, d in rader:
+        if d.get("kode") and d.get("okosystem"):
+            mapper_per_kode.setdefault(d["kode"], set()).add(d["okosystem"])
+
     # Sjekk koder, PDF-er og rekkefølge
-    koder, rekkefolge = set(), {}
+    sett, sjekket, rekkefolge = set(), set(), {}
     for radnr, d in rader:
         kode, mappe = d.get("kode"), d.get("okosystem")
         if kode is None:
             continue
         if not re.fullmatch(r"[A-Za-z0-9_-]+", kode):
             feil.append(f"Rad {radnr}: kode '{kode}' inneholder ugyldige tegn.")
-        if kode in koder:
-            feil.append(f"Rad {radnr}: kode '{kode}' står flere ganger.")
-        koder.add(kode)
-        if not (repo / PDF_MAPPE / f"{kode}.pdf").exists():
-            advarsler.append(f"Mangler PDF: {PDF_MAPPE.as_posix()}/{kode}.pdf")
-        for annen in repo.glob(f"*/{kode}.md"):
-            if annen.parent.name != mappe:
-                advarsler.append(f"{kode} finnes også i {annen.as_posix()}; slett den hvis faktaarket er flyttet.")
+        if (mappe, kode) in sett:
+            feil.append(f"Rad {radnr}: kode '{kode}' står flere ganger i økosystemet '{mappe}'.")
+        sett.add((mappe, kode))
+        if kode not in sjekket:
+            sjekket.add(kode)
+            if not (repo / PDF_MAPPE / f"{kode}.pdf").exists():
+                advarsler.append(f"Mangler PDF: {PDF_MAPPE.as_posix()}/{kode}.pdf")
+            for annen in repo.glob(f"*/{kode}.md"):
+                if annen.parent.name not in mapper_per_kode[kode]:
+                    advarsler.append(f"{annen.as_posix()} finnes, men står ikke i Excel; slett den hvis faktaarket er flyttet.")
         if mappe and d.get("nav_order") is not None:
             nokkel = (mappe, d["nav_order"])
             if nokkel in rekkefolge:
@@ -173,9 +180,15 @@ def main():
         neste += 1
 
     for _, d in rader:
+        fil = repo / d["okosystem"] / f"{d['kode']}.md"
+        tekst = ""
+        if fil.exists():
+            deler = fil.read_text(encoding="utf-8").split("---", 2)
+            if len(deler) == 3:
+                tekst = deler[2][1:] if deler[2].startswith("\n") else deler[2]
         fm = {"layout": "faktaark", "title": d["title"], "parent": d["parent"],
-              "kode": d["kode"], "nav_order": d["nav_order"]}
-        skriv(repo / d["okosystem"] / f"{d['kode']}.md", front_matter(fm), endringer)
+          "kode": d["kode"], "nav_order": d["nav_order"]}
+        skriv(fil, front_matter(fm) + tekst, endringer)
 
     for a in advarsler:
         print(f"::warning::{a}")
