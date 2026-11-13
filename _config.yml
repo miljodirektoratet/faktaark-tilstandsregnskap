@@ -4,6 +4,8 @@ description: Faktaark med informasjon om indikatorene i nasjonalt tilstandsregns
 color_scheme: miljo
 exclude:
   - testark.md
+  - data
+  - scripts
 
 nav_external_links:
   - title: Faktaark på GitHub
