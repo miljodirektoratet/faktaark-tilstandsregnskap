@@ -11,7 +11,7 @@ has_toc: false
 # Faktaark for kystvann
 {: .fs-9 }
 
-Faktaark med informasjon om indikatorene for økosystemet kystvann.
+Kommer snart! Faktaark med informasjon om indikatorene for økosystemet kystvann.
 {: .fs-6 .fw-300 }
 
 ## Indikatorer
