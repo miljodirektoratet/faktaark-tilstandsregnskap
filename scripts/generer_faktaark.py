@@ -1,4 +1,3 @@
-%python
 #!/usr/bin/env python3
 """
 Genererer faktaark-sider fra data/faktaark.xlsx (første ark).
