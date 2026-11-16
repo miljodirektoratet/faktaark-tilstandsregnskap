@@ -1,8 +1,16 @@
 name: Generer faktaark fra Excel
 
 on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "data/faktaark.xlsx"
+      - "scripts/generer_faktaark.py"
+
   push:
-    branches-ignore: [main]
+    branches:
+      - main
     paths:
       - "data/faktaark.xlsx"
       - "scripts/generer_faktaark.py"
@@ -23,7 +31,7 @@ jobs:
       - name: Generer md-filer
         run: python scripts/generer_faktaark.py
       - name: Commit til branchen
-        if: github.ref != 'refs/heads/main'
+        if: github.ref == 'refs/heads/main'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
