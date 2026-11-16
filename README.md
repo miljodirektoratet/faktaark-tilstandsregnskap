@@ -23,8 +23,8 @@ Alt kan gjøres i nettleseren. Nettsiden oppdateres først når endringene er go
 ### 2. Last opp regnearket
 
 1. Gå tilbake til forsiden av repoet.
-2. Gå til data/ og klikk på faktaark.xlsx. Last ned filen, åpne den i excel, og legg inn nye rader nederst. Lagre filen.
-4. Pass på at du står i branchen din. Gå til mappen `data/`, velg **Add file** > **Upload files** og last opp den nye filen. Med samme navn vil den erstatte den gamle. 
+2. Gå til data/ og klikk på faktaark.xlsx. Last ned filen direkte fra github (ikke trykk "View raw" først), åpne den i excel, og legg inn nye rader nederst. Lagre filen.
+4. Pass på at du står i branchen din. Gå til mappen `data/`, velg **Add file** > **Upload files** og last opp den nye filen. Med samme navn vil den erstatte den gamle. Dette er tryggere enn å slette den gamle og så laste opp den nye, da det sørger for at det skjer i samme commit. 
 5. Velg **Commit directly to the `faktaark-skog` branch** og trykk **Commit changes**.
 
 > Sjekk at det står navnet på branchen din, og ikke `main`, før du laster opp.
