@@ -76,14 +76,6 @@ Kontroller at:
 - Regnearket kan inneholde alle faktaarkene eller bare de nye. Ingenting blir slettet. Men det er ryddigst at alt ligger der. 
 - Sider for økosystemer som finnes fra før blir aldri endret.
 - Små rettelser kan gjøres direkte på `main`.
-- Hvis du vil bytte ut en pdf, slett den gamle før du legger inn den nye med samme navn.
-- Hvis du endrer noe i `data/faktaark.xlsx` som gjør at faktaarkets .md-fil får et nytt navn eller blir lagt under et nytt økosystem, må du også slette den gamle .md-filen manuelt.
-
-
-## Hvis en endring ikke oppdateres på nettsiden
-
-- Sjekk at workflowen har kjørt: Actions -> trykk på Generer faktaark fra Excel -> Trigg workflowen manulelt ("Run workflow") hvis den ikke har blitt kjørt. 
-- Prøv også å lukke fanen med nettsiden og åpne den på nytt, noen ganger henger ting igjen i nettleseren. 
 
 
 ## Slik er nettsiden bygget opp
@@ -110,15 +102,18 @@ Nettsiden oppdateres automatisk hver gang noe merges til `main`.
 
 ## Endre eller fjerne
 
-- **Rette navn eller rekkefølge for en indikator:** Endre raden i regnearket og last det opp på nytt. Små rettelser kan også gjøres direkte i `.md`-filen.
+- **Rette navn eller rekkefølge for en indikator:** Endre raden i regnearket og last det opp på nytt. Opplysningene i .md-filen oppdateres automatisk.
+- **Endre kode eller flytte en indikator til et annet økosystem:** Endre raden i regnearket og last det opp på nytt. Det opprettes en ny .md-fil med den nye koden eller i den nye økosystemmappen. Den gamle .md-filen slettes ikke automatisk og må slettes manuelt. Ved endring av kode må også PDF-en få samme nye filnavn, og den gamle PDF-en må slettes manuelt.
 - **Bytte ut en PDF:** Last opp den nye PDF-en med samme filnavn. Den gamle erstattes.
 - **Endre en økosystemside** (navn, rekkefølge, tekst): Rediger `index.md` i økosystemets mappe direkte. Den blir ikke endret automatisk. Hvis du endrer `title`, må `parent` endres tilsvarende i regnearket.
 - **Fjerne en indikator:** Slett raden i regnearket. Slett også `.md`-filen og PDF-en manuelt, fordi ingenting slettes automatisk.
+
 
 ## Hvis noe går galt
 
 - **Rødt kryss under Actions:** Klikk på kjøringen. Feilmeldingen sier hvilken rad i regnearket som må rettes.
 - **Indikatoren havner ikke under riktig økosystem:** Sjekk at `parent` er skrevet helt likt som `title` i økosystemets `index.md`.
 - **PDF-en vises ikke:** Sjekk at PDF-filen heter nøyaktig det samme som koden, også med store og små bokstaver.
+- **Nettsiden oppdateres ikke:** Sjekk at workflowen har kjørt: Actions -> trykk på Generer faktaark fra Excel -> Trigg workflowen manulelt ("Run workflow") hvis den ikke har blitt kjørt. Prøv også å lukke fanen med nettsiden og åpne den på nytt, noen ganger henger ting igjen i nettleseren. 
 
 Spørsmål: [Margrethe Gaardløs / margrethe.gaardlos@miljodir.no]
