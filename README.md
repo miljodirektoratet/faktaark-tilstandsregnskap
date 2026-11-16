@@ -70,11 +70,20 @@ Kontroller at:
 - navn og indikator-ID er riktige
 - riktig PDF vises, og **Åpne faktaarket i ny fane** fungerer
 
+
 ## Greit å vite
 
 - Regnearket kan inneholde alle faktaarkene eller bare de nye. Ingenting blir slettet. Men det er ryddigst at alt ligger der. 
 - Sider for økosystemer som finnes fra før blir aldri endret.
 - Små rettelser kan gjøres direkte på `main`.
+- Hvis du vil bytte ut en pdf, slett den gamle før du legger inn den nye med samme navn.
+- Hvis du endrer noe i `data/faktaark.xlsx` som gjør at faktaarkets .md-fil får et nytt navn eller blir lagt under et nytt økosystem, må du også slette den gamle .md-filen manuelt.
+
+
+## Hvis en endring ikke oppdateres på nettsiden
+
+- Sjekk at workflowen har kjørt: Actions -> trykk på Generer faktaark fra Excel -> Trigg workflowen manulelt ("Run workflow") hvis den ikke har blitt kjørt. 
+- Prøv også å lukke fanen med nettsiden og åpne den på nytt, noen ganger henger ting igjen i nettleseren. 
 
 
 ## Slik er nettsiden bygget opp
